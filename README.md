@@ -1,5 +1,6 @@
 # swag-lab
 E2E WebdriverIO Test Suite for Sauce Demo Website.
+
 # Overview
 This Project has been created using [WebdriverIO](https://webdriver.io/) and scripting language is TypeScript. 
 This is designed using [Page Object Model](https://webdriver.io/docs/pageobjects) where for each page a seperate locator class has been created which helps in maintaining locator.
@@ -16,7 +17,7 @@ minimum requirement- ```Node.js Version>=18``` ```Chrome Browser```
 3. After Execution in the console you will see the Spec Report and to open allure report run command ```allure open```.
 
 Also Attaching the result of tests execution on my system.
+[![tested with webdriver.io](https://img.shields.io/badge/tested%20with-webdriver.io-%23ea5906)](https://webdriver.io/)
 
 ![result](/assets/result.png)
 ![failureReport](/assets/failureResult.png)
-[![tested with webdriver.io](https://img.shields.io/badge/tested%20with-webdriver.io-%23ea5906)](https://webdriver.io/)
