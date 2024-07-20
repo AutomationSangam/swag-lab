@@ -21,4 +21,6 @@ Also Attaching the result of tests execution on my system.
 [![tested with webdriver.io](https://img.shields.io/badge/tested%20with-webdriver.io-%23ea5906)](https://webdriver.io/)
 
 ![result](/assets/result.png)
+
+
 ![failureReport](/assets/failureResult.png)
