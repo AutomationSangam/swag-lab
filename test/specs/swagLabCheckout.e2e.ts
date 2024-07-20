@@ -2,7 +2,7 @@ import { expect } from '@wdio/globals'
 import LoginPage from '../pageobjects/login.page.js'
 import productPage from '../pageobjects/product.page.js'
 import cartPage from '../pageobjects/cart.page.js'
-import custormerInformationPage from '../pageobjects/custormerInformation.page.js'
+import customerInformationPage from '../pageobjects/customerInformation.page.js'
 import checkoutPage from '../pageobjects/checkout.page.js'
 import checkoutCompletePage from '../pageobjects/checkoutComplete.page.js'
 import swagLabConstants from '../constants/constant.js'
@@ -73,16 +73,16 @@ describe('Swag Lab Checkout', () => {
         //Go to your information page
 
         await cartPage.checkoutButton.click()
-        await custormerInformationPage.checkoutInformationText.waitForDisplayed()
-        await expect(custormerInformationPage.swagLabsHeader).toBeDisplayed()
-        await expect(custormerInformationPage.continueButton).toBeDisplayed()
-        await expect(custormerInformationPage.cancelButton).toBeDisplayed()
-        await custormerInformationPage.firstNameField.setValue("Lean")
-        await custormerInformationPage.lastNameField.setValue("Technologies")
-        await custormerInformationPage.zipCodeField.setValue("411027")
+        await customerInformationPage.checkoutInformationText.waitForDisplayed()
+        await expect(customerInformationPage.swagLabsHeader).toBeDisplayed()
+        await expect(customerInformationPage.continueButton).toBeDisplayed()
+        await expect(customerInformationPage.cancelButton).toBeDisplayed()
+        await customerInformationPage.firstNameField.setValue("Lean")
+        await customerInformationPage.lastNameField.setValue("Technologies")
+        await customerInformationPage.zipCodeField.setValue("411027")
 
         //Goto Checkout Page
-        await custormerInformationPage.continueButton.click()
+        await customerInformationPage.continueButton.click()
         await checkoutPage.checkoutOverviewText.waitForDisplayed()
         await expect(checkoutPage.swagLabsHeader).toBeDisplayed()
         await expect(checkoutPage.backPackProductTitle).toBeDisplayed()
