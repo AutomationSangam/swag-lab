@@ -20,6 +20,3 @@ Also Attaching the result of tests execution on my system.
 ![result](/assets/result.png)
 ![failureReport](/assets/failureResult.png)
 [![tested with webdriver.io](https://img.shields.io/badge/tested%20with-webdriver.io-%23ea5906)](https://webdriver.io/)
-<a href="https://webdriver.io/">
-    <img alt="WebdriverIO" src="https://img.shields.io/badge/tested%20with-webdriver.io-%23ea5906">
-</a>
