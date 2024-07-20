@@ -7,6 +7,7 @@ import checkoutPage from '../pageobjects/checkout.page.js'
 import checkoutCompletePage from '../pageobjects/checkoutComplete.page.js'
 import swagLabConstants from '../constants/constant.js'
 import AllureReporter from '@wdio/allure-reporter'
+import commonUtils from '../utilities/commonUtils.js'
 
 
 describe('Swag Lab Checkout', () => {
@@ -96,15 +97,15 @@ describe('Swag Lab Checkout', () => {
         await expect(checkoutPage.oneSieProductPrice).toHaveText(onesieProductPrice)
         let subTotal:string=await checkoutPage.totalAmountExcludingTax.getText()
         AllureReporter.addStep('Item total excluding tax:'+subTotal)
-        subTotal=subTotal.replace('Item total: $','')
+        subTotal=commonUtils.removeTextFromSubtotal(subTotal)
         const totalprice=parseFloat(backpackProductPrice.replace('$',''))+parseFloat(boltTshirtProductPrice.replace('$',''))+parseFloat(onesieProductPrice.replace('$',''))
         await expect(totalprice).toEqual(parseFloat(subTotal))
         let taxAmount:string=await checkoutPage.taxAmount.getText()
         AllureReporter.addStep(taxAmount)
-        taxAmount=taxAmount.replace('Tax: $','')
+        taxAmount=commonUtils.removeTextFromTaxAmount(taxAmount)
         let totalAmount:string=await checkoutPage.totalAmount.getText()
         AllureReporter.addStep(totalAmount)
-        totalAmount=totalAmount.replace('Total: $','')
+        totalAmount=commonUtils.removeTextFromTotalAmount(totalAmount)
         const sum=totalprice+parseFloat(taxAmount)
         await expect(sum).toEqual(parseFloat(totalAmount))
         await expect(checkoutPage.cancelButton).toBeDisplayed()

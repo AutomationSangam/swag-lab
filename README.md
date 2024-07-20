@@ -1,9 +1,9 @@
 # swag-lab
 E2E WebdriverIO Test Suite for Sauce Demo Website.
 # Overview
-This Project has been created using WebdriverIO and scripting language is TypeScript. 
-This is designed using Page Object Model where for each page a seperate locator class has been created which helps in maintaining locator.
-To Write the Test i have used Mocha as Test Framework which gives flexibility and capability to write independent Tests. For Assertion i have used Expect library provided by Webdriverio.Using default Spec report provided by Webdriverio and Allure Report.
+This Project has been created using [WebdriverIO](https://webdriver.io/) and scripting language is TypeScript. 
+This is designed using [Page Object Model](https://webdriver.io/docs/pageobjects) where for each page a seperate locator class has been created which helps in maintaining locator.
+To Write the Test i have used [Mocha](https://webdriver.io/docs/frameworks#using-mocha) as Test Framework which gives flexibility and capability to write independent Tests. For Assertion i have used Expect library provided by Webdriverio.Using default [Spec report](https://webdriver.io/docs/spec-reporter) provided by Webdriverio and [Allure Report](https://webdriver.io/docs/allure-reporter).
 Also implemented that if any test case fails than it will automatically attach the screen shot in the report.
 
 Note:If you are using allure for the first time than you might also need to install allure using ```npm i allure```.
